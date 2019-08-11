@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <link rel="stylesheet" href="/css/bootstrap.min.css" >
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+        <title>Solus i3wm configuration</title>
+
+        <link rel="stylesheet" href="/css/stylesheet.css">
+    </head>
+    <body>
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-md navbar-light">
+          <span class="navbar-brand mb-0 h1"></span>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle Navigation" name="button">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link " href="/" id="headerText">Home</a>
+              <a class="nav-item nav-link" href="https://github.com/viyoriya" target="_blank" id="headerText">GitHub</a>
+            </div>
+          </div>
+        </nav>
+
+        <section id="page-title">
+          <h1><a href="/">Solus Blog</a></h1>
+        </section><br/><br/>
+
+
+
+<div class="blog-post">
+  <h1>Solus i3wm configuration</h1>
+  <div class="blog-post-subheader">
+    <time>10 Aug 2019</time>
+  </div>
+  <div class="blog-post-content">
+    
+
+<h6>
+I just tried new window manager and did a log. This log may be useful for others :).
+Most of the config files I downloaded from the net and I just modified it.
+</h6>
+
+<h5>
+Dotfiles => <a href="https://github.com/viyoriya/SOLUS_I3_SETUP">Solus i3 config dotfiles </a>
+</h5>
+
+<h6>
+Hope i uploaded everything if anything missing please do let me know.
+
+</h6>
+
+<h4 id="eopkg-install">eopkg install</h4>
+
+<h6>These are the main packages to install i3wm</h6>
+
+<pre><code>sudo eopkg it i3 i3blocks i3status i3lock dmenu dunst rofi feh scrot 
+compton xprop lxappearance xkill  
+
+</code></pre>
+
+<h3 id="fontawesome">fontawesome</h3>
+
+<h6>fontawesome for font icons copy the .font folder and place it in $HOME and run below command in terminal.</h6>
+
+<pre><code>fc-cache -vrf
+</code></pre>
+
+<h3 id="lxappearance">lxappearance</h3>
+
+<p><h6>Use lxappearance to set the theme. I used the Nordic bluish theme and the link below</h6></p>
+
+<p><a href="https://www.gnome-look.org/p/1267246/startdownload?file_id=1564252337&file_name=Nordic-bluish-accent.tar.xz&file_type=application/x-xz&file_size=263128">
+Nordic bluish theme</a></p>
+
+<p></h6></p>
+
+<h3 id="feh">feh</h3>
+
+<p><h6>used feh for setting wallpaper (find the setting in i3 config file).It does support setting multimonitor wallpaper display. (change the img folder or img file path in i3 config file) </h6></p>
+
+<h3 id="compton">compton</h3>
+
+<h6>
+compton for compositor you need to find which option works for you and set it else use generic one like
+(comptom -b) with out config file path in i3 config. Please feel free to share the best settings to me :) 
+</h6>
+
+<h3 id="xprop">xprop</h3>
+
+<h6>
+run xprop in terminal and move the mouse pointer to the desired application the xprop will print the details of the application. Find the class name and use it in i3 config and compton. (find a WM_CLASS(STRING) in xprop output)
+</h6>
+
+<p><img src="/img/xprop.png" alt="Xprop screenshot" /></p>
+
+<pre><code>xprop
+</code></pre>
+
+<h3 id="volumeicon">volumeicon</h3>
+
+<h6>copy the volumeicon application file (tray icon) from to_usr_bin folder to /usr/bin </h6>
+
+<h3 id="blurlock-i3exit">blurlock, i3exit</h3>
+
+<h6>copy the blurlock and i3exit shell script from to_usr_bin folder to /usr/bin. blurlock is just a fancy looking lock. Finally provide exec permission to all the shell script </h6>  
+
+<pre><code> chmod +x /usr/bin/volumeicon
+ chmod +x /usr/bin/blurlock
+ chmod +x /usr/bin/i3exit
+
+</code></pre>
+
+<h3 id="i3-config">i3 config</h3>
+
+<h6>
+ its a main config file  (~/.config/i3/config)
+ I did set the super/windows key as a mod key (you can change it to other key).
+ Go through the key bindings in the file and remember the keybinding.
+</h6>
+<h6>mod+0 key to lock/exit/reboot/shutdown </h6>
+
+<p><img src="/img/mod_0_logout.png" alt="i3 screenshot" /></p>
+
+<pre><code>~/.config/i3/config
+</code></pre>
+
+<h3 id="i3-blocks-config">i3 blocks config</h3>
+
+<h6>To display the top panel have a look at i3blocks config file  </h6>
+
+<pre><code>~/.config/i3/i3Blocks.conf
+</code></pre>
+
+<h3 id="dunst">dunst</h3>
+
+<h6>used dunst to show the notification</h6>
+
+<p><img src="/img/dunst_1.png" alt="Dunst screenshot" /></p>
+
+<h6>I used Papirus-Dark you can change icon theme in dunstrc config file.
+    if icons are not visible then make a soft link in local/share. 
+</h6>
+
+<pre><code>cd ~/.local/share
+ln -s /usr/share/icons/ icons
+</code></pre>
+
+<h6>dunst config </h6>
+
+<pre><code>~/.config/dunst/dunstrc
+</code></pre>
+
+<h3 id="rofi">rofi</h3>
+
+<h6>rofi run launcher (mod+d key) - screenshot </h6>
+
+<p><img src="/img/rofi_run.png" alt="Rofi screenshot" /></p>
+
+<h6>rofi active window launcher (mod+tab key) - screenshot </h6>
+
+<p><img src="/img/rofi_window_1.png" alt="Rofi screenshot" /></p>
+
+<h6>rofi calendar mouse click on date/time in top panel - screenshot</h6>
+
+<p><img src="/img/rofi_calendar.png" alt="Rofi screenshot" /></p>
+
+<h6>Set the alignment in rofi-calendar.sh  mainly -yoffset -285 -xoffset 540 \  values</h6>
+
+<pre><code>~/.config/i3/scripts/rofi-calendar.sh
+</code></pre>
+
+<h6>rofi signout mouse click on powerbutton in top panel - screenshot</h6>
+
+<p><img src="/img/signout.png" alt="Rofi screenshot" /></p>
+
+<h6>Set the alignment in power-menu.sh  mainly -yoffset -285 -xoffset 540 \  values.
+Please uncomment [poweroff] blocks in i3Blocks.conf file if you want to use it (I am using mod+0)
+</h6>
+
+<pre><code>~/.config/i3/scripts/power-menu.sh
+</code></pre>
+
+<h6>rofi theme file </h6>
+
+<pre><code>~/.config/rofi/config
+</code></pre>
+
+<h6>
+have a look at rofi theme (.rasi) file in rofi folder and .Xresource file for any modification or new themes
+by default rofi comes with rofi-theme-selector just run the same in terminal and follow the steps.
+</h6>
+
+<pre><code>rofi-theme-selector
+</code></pre>
+
+<h3 id="morc-menu">morc_menu</h3>
+
+<h6>
+Morc menu is an alternative to dmenu i did download manually from 
+<a href="https://github.com/Boruch-Baum/morc_menu">morc_menu</a>
+copy the morc_menu application file to /usr/bin and customised config file in dotfiles folder.
+or copy from to_usr_bin folder to /usr/bin and finally provide exec permission for morc_menu
+</h6>
+
+<pre><code> chmod +x /usr/bin/morc_menu
+
+</code></pre>
+
+<p><img src="/img/morc_menu.png" alt="Morc menu screenshot" /></p>
+
+<h3 id="disable-auto-login">Disable auto login</h3>
+
+<h6>disable auto login to gnome/kde/budgie</h6>
+
+<pre><code> sudo nano /etc/lightdm/lightdm.conf
+</code></pre>
+
+<h6>comment the autologin-user</h6>
+
+<h6>example: </h6>
+
+<pre><code>[Seat:*]
+#autologin-user=&lt;username&gt;
+</code></pre>
+
+<h6>Restart the system and you will see the login screen and choose i3</h6>
+
+<h3 id="st">ST</h3>
+
+<h6>I am using suckless terminal its bit tricky mainly the scrolling. If you dont want to use st please do change in i3 config file search for st and replace with your favorite terminal 
+
+Thats it for i3. Feel free to make an issue in the github will respond ASAP. 
+</h6>
+
+  </div>
+</div>
+
+      <footer>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <hr>
+      </footer>
+    </div> 
+    
+    <script src="/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+  </body>
+</html>
+

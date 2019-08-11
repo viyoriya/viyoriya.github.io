@@ -1,0 +1,101 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: auto;
+    max-width: 50em;
+    background-color: #2E3440;
+    color: #81A1C1;
+}
+
+#headerText {
+  color: #81A1C1;
+}
+
+hr {
+  border-color: #81A1C1;
+}
+
+#page-title {
+    text-align: center;
+}
+
+#page-title h1 a {
+    color: #81A1C1;
+    font-size: 2.7rem;
+}
+
+.post a {
+    color: #81A1C1;
+}
+
+#author-name h6 a {
+  color: #81A1C1;
+  font-weight: normal;
+  font-size: small;
+}
+
+#page-title a:hover, .post a:hover {
+    text-decoration: underline;
+}
+
+.date-time-title {
+    font-family: 'Open Sans', sans-serif;
+    color: #81A1C1;
+
+}
+
+.blog-post-content {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.posts_listing li {
+  list-style-type: none;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #81A1C1;
+}
+
+h2 {
+  font-size: 1.7rem;
+  color: #81A1C1;
+}
+
+h3 {
+  font-size: 1.4rem;
+  color: #81A1C1;
+}
+
+h4  {
+  font-size: 1.2rem;
+  color: #81A1C1;
+}
+
+h5  {
+  font-size: 1rem;
+  color: #81A1C1;
+}
+
+h6  {
+  font-size: 0.8rem;
+  color: #81A1C1;
+}
+
+
+
+pre {
+ 
+ width: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #2E3440;
+  border: 2px;
+  border-style: solid;
+  border-color: #B48EAD;
+  background-color: #E5E9F0;
+}
+
+footer  {
+  text-align: center;
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Solus Blog</title>
+    <link>http://example.org/tags/</link>
+    <description>Recent content in Tags on Solus Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 10 Aug 2019 19:11:59 +0100</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Solus</title>
+      <link>http://example.org/tags/solus/</link>
+      <pubDate>Sat, 10 Aug 2019 19:11:59 +0100</pubDate>
+      
+      <guid>http://example.org/tags/solus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>i3wm</title>
+      <link>http://example.org/tags/i3wm/</link>
+      <pubDate>Sat, 10 Aug 2019 19:11:59 +0100</pubDate>
+      
+      <guid>http://example.org/tags/i3wm/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
