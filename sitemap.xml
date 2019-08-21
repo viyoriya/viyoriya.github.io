@@ -3,21 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://example.org/tags/i3wm/</loc>
+    <lastmod>2019-08-10T19:11:59+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://example.org/posts/</loc>
     <lastmod>2019-08-10T19:11:59+01:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://example.org/tags/solus/</loc>
     <lastmod>2019-08-10T19:11:59+01:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://example.org/</loc>
     <lastmod>2019-08-10T19:11:59+01:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -28,18 +30,10 @@
   <url>
     <loc>http://example.org/tags/</loc>
     <lastmod>2019-08-10T19:11:59+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.org/tags/i3wm/</loc>
-    <lastmod>2019-08-10T19:11:59+01:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://example.org/categories/</loc>
-    <priority>0</priority>
   </url>
   
 </urlset>

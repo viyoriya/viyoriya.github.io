@@ -12,20 +12,20 @@
     
     
     <item>
-      <title>Solus</title>
-      <link>http://example.org/tags/solus/</link>
-      <pubDate>Sat, 10 Aug 2019 19:11:59 +0100</pubDate>
-      
-      <guid>http://example.org/tags/solus/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>i3wm</title>
       <link>http://example.org/tags/i3wm/</link>
       <pubDate>Sat, 10 Aug 2019 19:11:59 +0100</pubDate>
       
       <guid>http://example.org/tags/i3wm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Solus</title>
+      <link>http://example.org/tags/solus/</link>
+      <pubDate>Sat, 10 Aug 2019 19:11:59 +0100</pubDate>
+      
+      <guid>http://example.org/tags/solus/</guid>
       <description></description>
     </item>
     
